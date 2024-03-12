@@ -1,4 +1,4 @@
-⭐# Munhak.Zip_Back
+# ⭐Munhak.Zip_Back
 
 더 자세한 깃허브 룰 설명은 팀 노션 참고. 
 
