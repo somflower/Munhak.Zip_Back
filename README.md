@@ -50,4 +50,3 @@ pr시 자신이 작업한 내용 자세하게 써주어야 함!!
 예진 ← 민영 ← 다윤 ← 미현 ex( 민영이가 예진이 PR merge, 예진이가 미현 PR merge
 
 merge 할 때 delete branch 해주세용
-#030962
