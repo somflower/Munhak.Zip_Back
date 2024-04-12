@@ -2,12 +2,20 @@ package com.example.jpetstore.domain;
 
 public class User {
 
+    private Long id;
+
     private String user_id;
     private String password;
     private String nickname;
     private String hint;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getUser_id() {
         return user_id;
