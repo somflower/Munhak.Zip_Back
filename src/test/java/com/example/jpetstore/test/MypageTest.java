@@ -29,9 +29,9 @@ public class MypageTest {
 
         // 사용자가 null인지 확인
         assertNotNull(user);
-        System.out.println("유저 닉네임:"+ user.getId()+user.getUser_id() +user.getNickname());
+        System.out.println("이전 유저 닉네임:"+ user.getId()+user.getUser_id() +user.getNickname());
         // 사용자의 닉네임 변경
-        mybatisMypageDao.updateNickname(user.getUser_id(),"ChangeNickname~~~!!");
+        mybatisMypageDao.updateNickname(user.getUser_id(),"신뇽");
 
         User user1 = mypageDao.getUserById(2L); // 콘솔에 출력하려면 새로 객체를 다시 만들어줘야함!!
 
