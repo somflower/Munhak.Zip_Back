@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class MybatisMypageDao implements MypageDao {
-      //MypageDao 재정의 및 구현
-   @Autowired  //의존성 주입을 해주지 않으면, 즉(@Autowired)를 해주지 않으면 NullPointerException에러가 나니 주의!!!!
+    //MypageDao 재정의 및 구현
+    @Autowired  //의존성 주입을 해주지 않으면, 즉(@Autowired)를 해주지 않으면 NullPointerException에러가 나니 주의!!!!
     private MyPageMapper myPageMapper;
 
     @Transactional  //Transactional 어노테이션을 정의해주어 트랜잭션 관리를 해준다.
@@ -22,11 +22,10 @@ public class MybatisMypageDao implements MypageDao {
     }
 
     @Transactional
-   public int updateNickname(String userId, String newNickname) throws DataAccessException {
+    public int updateNickname(String userId, String newNickname) throws DataAccessException {
         System.out.println("MybatisMypageDao - updateNickname - userId: " + userId + ", newNickname: " + newNickname);
         return myPageMapper.updateUserNickname(userId, newNickname);
     }
-
 
 
 }

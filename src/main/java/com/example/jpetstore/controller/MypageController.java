@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MypageController {
 
+    //컨트롤러는 서비스 호출
     private final MypageService mypageService;
 
     @Autowired
