@@ -18,7 +18,7 @@ public class UserController {
         this.userServiceImpl = userServiceImpl;
     }
 
-    @PostMapping("/updatePassword")
+    @PostMapping("/updatePw")
     @ResponseBody
     public String updatePassword(
             @RequestParam("id") String id,

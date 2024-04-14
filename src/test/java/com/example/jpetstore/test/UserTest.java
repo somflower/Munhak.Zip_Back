@@ -24,14 +24,14 @@ public class UserTest {
 
 
     @Test
-    public void testUser2() throws Exception{
+    public void testUser() throws Exception{
 
         User user = userDao.getUserById(3L);
 
         assertNotNull(user);
-        System.out.println("유저 비번:"+ user.getId()+user.getUser_id() +user.getPassword());
+        System.out.println("유저 현재 비번:"+ user.getId()+ user.getPassword());
 
-        mybatisUserDao.updatePassword(user.getUser_id(),"newPass");
+        mybatisUserDao.updatePassword(user.getUser_id(),"Pass");
 
         User user1 = userDao.getUserById(3L);
 

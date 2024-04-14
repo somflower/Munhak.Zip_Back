@@ -3,7 +3,7 @@ package com.example.jpetstore.service;
 import com.example.jpetstore.dao.mybatis.MybatisMypageDao;
 import com.example.jpetstore.dao.mybatis.MybatisUserDao;
 
-public abstract class UserServiceImpl{
+public abstract class UserServiceImpl implements UserService{
 
     private MybatisUserDao mybatisUserDao;
 
