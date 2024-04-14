@@ -5,7 +5,7 @@ import com.example.jpetstore.dao.mybatis.MybatisUserDao;
 
 public abstract class UserServiceImpl implements UserService{
 
-    private final MybatisUserDao mybatisUserDao;
+    private MybatisUserDao mybatisUserDao;
 
     public UserServiceImpl(MybatisMypageDao mybatisMypageDao) {
         this.mybatisUserDao = mybatisUserDao;

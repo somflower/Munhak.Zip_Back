@@ -1,7 +1,6 @@
 package com.example.jpetstore.dao.mybatis;
 
 import com.example.jpetstore.dao.UserDao;
-import com.example.jpetstore.dao.mybatis.mapper.MyPageMapper;
 import com.example.jpetstore.dao.mybatis.mapper.UserMapper;
 import com.example.jpetstore.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +14,12 @@ public class MybatisUserDao implements UserDao {
     private UserMapper userMapper;
     @Override
     public User getUserById(Long id) throws DataAccessException {
-        return null;
+        return userMapper.getUserById(id);
     }
 
     @Override
     public int updatePassword(String userId, String newPassword) throws DataAccessException {
-        return 0;
+        System.out.println("MybatisUserDao - updatePassword - userId: " + userId + ", newPassword: " + newPassword);
+        return userMapper.updateUserPassword(userId, newPassword);
     }
 }
