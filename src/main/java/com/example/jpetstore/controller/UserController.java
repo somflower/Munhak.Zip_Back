@@ -21,7 +21,7 @@ public class UserController {
     @PostMapping("/updatePw")
     @ResponseBody
     public String updatePassword(
-            @RequestParam("id") String id,
+            @RequestParam("id") Long id,
             @RequestParam("newPassword") String newPassword
     ) {
         int rowsUpdated = userServiceImpl.updatePassword(id, newPassword);

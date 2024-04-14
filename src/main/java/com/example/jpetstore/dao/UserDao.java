@@ -7,5 +7,5 @@ public interface UserDao {
 
     public User getUserById(Long id) throws DataAccessException;
     //비번 변경
-    public int updatePassword(String id, String newPassword) throws DataAccessException;
+    public int updatePassword(Long id, String newPassword) throws DataAccessException;
 }
