@@ -11,8 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Mapper
 public interface UserMapper {
     @Transactional
-    @Select("SELECT * FROM USER_TABLE WHERE ID = #{userId}")
-    User getUserById(Long userId);
+    @Select("SELECT * FROM USER_TABLE WHERE ID = #{id}")
+    User getUserById(Long id);
 
     @Transactional
     @Update("UPDATE USER_TABLE SET PASSWORD = #{newPassword} WHERE USER_ID = #{userid}")

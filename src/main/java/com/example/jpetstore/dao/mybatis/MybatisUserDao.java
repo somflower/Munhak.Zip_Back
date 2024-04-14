@@ -14,7 +14,7 @@ public class MybatisUserDao implements UserDao {
     @Autowired
     private UserMapper userMapper;
     @Override
-    public User getUserById(Long userId) throws DataAccessException {
+    public User getUserById(Long id) throws DataAccessException {
         return null;
     }
 
