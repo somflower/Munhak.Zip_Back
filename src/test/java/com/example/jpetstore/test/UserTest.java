@@ -31,7 +31,7 @@ public class UserTest {
         assertNotNull(user);
         System.out.println("유저 현재 비번:"+ user.getId()+ user.getPassword());
 
-        mybatisUserDao.updatePassword(user.getId(),"Pass");
+        mybatisUserDao.updatePassword(user.getId(),"newPass");
 
         User user1 = userDao.getUserById(3L);
 
