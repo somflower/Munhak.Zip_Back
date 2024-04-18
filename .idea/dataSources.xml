@@ -1,35 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-<<<<<<< HEAD
-    <data-source source="LOCAL" name="@dblab.dongduk.ac.kr" uuid="1006a7cf-f322-48cf-a3d0-cf0801dd0ae8">
-=======
-    <data-source source="LOCAL" name="hmy" uuid="108f6507-ed17-4444-90a9-bb324db54108">
->>>>>>> 8112f508874646b1c0ababf770d0ee859a49808a
+    <data-source source="LOCAL" name="@dblab.dongduk.ac.kr" uuid="2f007099-d761-4464-b5de-4686034a362a">
       <driver-ref>oracle.19</driver-ref>
       <synchronize>true</synchronize>
       <auto-commit>false</auto-commit>
       <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@//dblab.dongduk.ac.kr:1521/orclpdb</jdbc-url>
-<<<<<<< HEAD
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
-        <property name="com.intellij.clouds.kubernetes.db.container.port" />
-      </jdbc-additional-properties>
-=======
->>>>>>> 8112f508874646b1c0ababf770d0ee859a49808a
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="@dblab.dongduk.ac.kr" uuid="a50950f0-c9e8-4ca6-b8b0-cf94b0b4eb9b">
-      <driver-ref>oracle.19</driver-ref>
-      <synchronize>true</synchronize>
-      <auto-commit>false</auto-commit>
-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
-      <jdbc-url>jdbc:oracle:thin:@//dblab.dongduk.ac.kr/orclpdb</jdbc-url>
-      <jdbc-additional-properties>
-        <property name="com.intellij.clouds.kubernetes.db.host.port" />
-        <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
+        <property name="com.intellij.clouds.kubernetes.db.resource.type" value="Deployment" />
         <property name="com.intellij.clouds.kubernetes.db.container.port" />
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
