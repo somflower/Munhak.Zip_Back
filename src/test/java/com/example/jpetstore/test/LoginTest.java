@@ -30,6 +30,7 @@ public class LoginTest {
 
 
         System.out.println("userId: " + user1.getUser_id() + " nickName: " + user1.getNickname());
+        //System.out.println("userId: " + user2.getUser_id() + " nickName: " + user2.getNickname());
     }
 
 }
