@@ -14,12 +14,12 @@ public interface MyPageMapper {
     @Select("SELECT * FROM USER_TABLE WHERE ID = #{id}")
     User getUserById(Long id);
     @Transactional
-    @Update("UPDATE USER_TABLE SET NICKNAME = #{newnickname} WHERE ID = #{id}")
+   // @Update("UPDATE USER_TABLE SET NICKNAME = #{newnickname} WHERE ID = #{id}")
     int updateUserNickname(@Param("id") Long id, @Param("newnickname") String newnickname);
 
 
     @Transactional
-    @Update("UPDATE USER_TABLE SET PASSWORD = #{newpassword} WHERE ID = #{id}")
+    //@Update("UPDATE USER_TABLE SET PASSWORD = #{newpassword} WHERE ID = #{id}")
     int updateUserPassword(@Param("id") Long id, @Param("newpassword") String newpassword);
 }
 
