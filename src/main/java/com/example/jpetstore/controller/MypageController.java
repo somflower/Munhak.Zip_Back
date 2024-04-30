@@ -21,14 +21,26 @@ public class MypageController {
     @PostMapping("/updateNickname")
     @ResponseBody
     public String updateNickname(
-            @RequestParam("userId") String userId,
+            @RequestParam("id") Long id,
             @RequestParam("newNickname") String newNickname
     ) {
-        int rowsUpdated = mypageService.updateNickname(userId, newNickname);
+        int rowsUpdated = mypageService.updateNickname(id, newNickname);
         if (rowsUpdated > 0) {
             return "Nickname updated successfully";
         } else {
             return "Failed to update nickname";
         }
     }
+
+    public String changePassword(
+            @RequestParam("id") Long id,
+            @RequestParam("newNickname") String newPassword) {
+        int rowsUpdated = mypageService.changePassword(id, newPassword);
+        if (rowsUpdated > 0) {
+            return "Password updated successfully";
+        } else {
+            return "Failed to update Password";
+        }
+    }
+
 }
