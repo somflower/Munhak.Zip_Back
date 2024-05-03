@@ -23,8 +23,15 @@ public class MybatisUserDao implements UserDao {
         userMapper.updateUserPassword(id, newPassword);
     }
 
+    @Override
     public User findUser(String hint,String nickname) throws DataAccessException{
         System.out.println("MybatisUserDao - findUser - hint: " + hint + ", nickname: " + nickname);
         return userMapper.findUser(hint, nickname);
+    }
+
+    @Override
+    public void updateNickname(Long id, String newNickname) throws DataAccessException{
+        System.out.println("MybatisUserDao - updateNickname - id: " + id + ", nickname: " + newNickname);
+        userMapper.updateUserNickname(id, newNickname);
     }
 }
