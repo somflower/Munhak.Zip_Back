@@ -12,4 +12,7 @@
     <select id="findUser" resultType="com.example.jpetstore.domain.User">
         SELECT * FROM USER_TABLE WHERE HINT = #{hint} AND NICKNAME = #{nickname}
     </select>
+    <select id="updateUserNickname" resultType="com.example.jpetstore.domain.User">
+        UPDATE USER_TABLE SET NICKNAME = #{newNickname} WHERE ID = #{id}
+    </select>
 </mapper>
