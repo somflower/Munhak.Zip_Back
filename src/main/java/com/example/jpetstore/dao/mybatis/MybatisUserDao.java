@@ -23,4 +23,8 @@ public class MybatisUserDao implements UserDao {
         userMapper.updateUserPassword(id, newPassword);
     }
 
+    public User findUser(String hint,String nickname) throws DataAccessException{
+        System.out.println("MybatisUserDao - findUser - hint: " + hint + ", nickname: " + nickname);
+        return userMapper.findUser(hint, nickname);
+    }
 }
