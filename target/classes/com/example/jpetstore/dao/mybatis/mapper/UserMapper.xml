@@ -6,13 +6,16 @@
     <select id="getUserById" resultType="com.example.jpetstore.domain.User">
         SELECT * FROM USER_TABLE WHERE ID = #{id}
     </select>
-    <select id="updateUserPassword" resultType="com.example.jpetstore.domain.User">
+    <update id="updateUserPassword">
         UPDATE USER_TABLE SET PASSWORD = #{newPassword} WHERE ID = #{id}
-    </select>
+    </update>
     <select id="findUser" resultType="com.example.jpetstore.domain.User">
         SELECT * FROM USER_TABLE WHERE HINT = #{hint} AND NICKNAME = #{nickname}
     </select>
-    <select id="updateUserNickname" resultType="com.example.jpetstore.domain.User">
+    <update id="updateUserNickname">
         UPDATE USER_TABLE SET NICKNAME = #{newNickname} WHERE ID = #{id}
+    </update>
+    <select id="existingUserNickname" resultType="com.example.jpetstore.domain.User">
+        SELECT * FROM USER_TABLE WHERE NICKNAME = #{nickname}
     </select>
 </mapper>
