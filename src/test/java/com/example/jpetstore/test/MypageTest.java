@@ -62,7 +62,7 @@ public class MypageTest {
         System.out.println("이전 유저 아이디:" + user3.getId() + "이전 비밀번호:" + user3.getPassword());
 
 //        System.out.println("현재 비밀번호를 입력하세요: ");
-//        String currentPassword = br.readLine();
+//        String currentPassword A= br.readLine();
 
 //        if (user3.getPassword() == currentPassword) {
 //            System.out.println("새로운 비밀번호를 입력하세요: ");
