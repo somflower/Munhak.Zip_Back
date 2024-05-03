@@ -23,4 +23,6 @@ public interface UserMapper {
 
     //사용자 닉네임 수정
     void updateUserNickname(@Param("id") Long id, @Param("newNickname") String newPassword);
+
+    User existingUserNickname(@Param("nickname") String nickname);
 }
