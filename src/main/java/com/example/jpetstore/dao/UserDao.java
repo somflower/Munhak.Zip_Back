@@ -9,4 +9,6 @@ public interface UserDao {
     //비번 변경
     public void updatePassword(Long id, String newPassword) throws DataAccessException;
 
+    public User findUser(String hint, String nickname) throws DataAccessException;
+
 }
