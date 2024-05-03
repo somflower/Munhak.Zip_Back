@@ -34,4 +34,10 @@ public class MybatisUserDao implements UserDao {
         System.out.println("MybatisUserDao - updateNickname - id: " + id + ", nickname: " + newNickname);
         userMapper.updateUserNickname(id, newNickname);
     }
+
+    @Override
+    public User existingNickname(String nickname) throws DataAccessException{
+        System.out.println("MybatisUserDao - existingNickname - nickname: " + nickname);
+        return userMapper.existingUserNickname(nickname);
+    }
 }
