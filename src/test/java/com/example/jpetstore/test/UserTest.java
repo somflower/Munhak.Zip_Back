@@ -48,7 +48,7 @@ public class UserTest {
         User user2 =  mybatisUserDao.findUser("kim", "mimi");
         System.out.println("찾은 유저 아이디:"+ user2.getUser_id());
 
-        //
+        //사용자 닉제임 수정
         User user3 = userDao.getUserById(3L);
         mybatisUserDao.updateNickname(user.getId(), "dydy");
         User user4 = userDao.getUserById(3L);
