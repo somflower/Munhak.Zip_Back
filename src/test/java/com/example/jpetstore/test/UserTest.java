@@ -57,6 +57,14 @@ public class UserTest {
         mybatisUserDao.updateNickname(user.getId(), "dydy");
         User user4 = userDao.getUserById(3L);
         System.out.println("변경된 유저닉네임:"+ user4.getNickname());
+
+        //
+        User user5 = mybatisUserDao.existingNickname("dydy");
+        if(user5 != null) {
+            System.out.println("사용 중인 닉네임입니다");
+        }else {
+            System.out.println("사용 가능한 닉네임입니다");
+        }
     }
 
 }
