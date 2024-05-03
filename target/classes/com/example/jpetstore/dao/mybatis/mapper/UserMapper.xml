@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.jpetstore.dao.mybatis.mapper.UserMapper">
+    <!-- 사용자를 가져옴 -->
+    <select id="getUserById" resultType="com.example.jpetstore.domain.User">
+        SELECT * FROM USER_TABLE WHERE ID = #{id}
+    </select>
+</mapper>

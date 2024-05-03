@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Mapper
 public interface UserMapper {
-    @Transactional
-    @Select("SELECT * FROM USER_TABLE WHERE ID = #{id}")
+//    @Transactional
+//    @Select("SELECT * FROM USER_TABLE WHERE ID = #{id}")
     User getUserById(Long id);
 
     @Transactional
