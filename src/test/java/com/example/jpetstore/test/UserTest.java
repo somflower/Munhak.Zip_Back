@@ -37,11 +37,15 @@ public class UserTest {
 
         System.out.println("변경된 유저비번:"+ user1.getPassword());
 
+        //비번 확인
         String check = "newPass";
         if (check.equals(user1.getPassword()))
             System.out.println("맞았다!");
         else
             System.out.println("틀렸다!");
+
+        User user2 =  mybatisUserDao.findUser("dy", "dy");
+        System.out.println("찾은 유저 아이디:"+ user2.getUser_id());
     }
 
 }
