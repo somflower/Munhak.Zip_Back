@@ -46,7 +46,11 @@ public class UserTest {
 
         //사용자 찾기
         User user2 =  mybatisUserDao.findUser("kim", "mimi");
-        System.out.println("찾은 유저 아이디:"+ user2.getUser_id());
+        if (user2 != null) {
+            System.out.println("찾은 유저 아이디:" + user2.getUser_id());
+        } else {
+            System.out.println("사용자를 찾을 수 없습니다.");
+        }
 
         //사용자 닉제임 수정
         User user3 = userDao.getUserById(3L);
