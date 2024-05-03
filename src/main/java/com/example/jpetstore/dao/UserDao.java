@@ -11,4 +11,6 @@ public interface UserDao {
 
     public User findUser(String hint, String nickname) throws DataAccessException;
 
+    public void updateNickname(Long id, String newNickname) throws DataAccessException;
+
 }
