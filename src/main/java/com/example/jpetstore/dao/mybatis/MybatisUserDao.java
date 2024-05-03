@@ -22,4 +22,5 @@ public class MybatisUserDao implements UserDao {
         System.out.println("MybatisUserDao - updatePassword - id: " + id + ", newPassword: " + newPassword);
         userMapper.updateUserPassword(id, newPassword);
     }
+
 }

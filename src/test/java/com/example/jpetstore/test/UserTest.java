@@ -36,6 +36,12 @@ public class UserTest {
         User user1 = userDao.getUserById(3L);
 
         System.out.println("변경된 유저비번:"+ user1.getPassword());
+
+        String check = "newPass";
+        if (check.equals(user1.getPassword()))
+            System.out.println("맞았다!");
+        else
+            System.out.println("틀렸다!");
     }
 
 }
