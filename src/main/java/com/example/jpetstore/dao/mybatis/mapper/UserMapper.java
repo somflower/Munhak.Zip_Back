@@ -14,7 +14,7 @@ public interface UserMapper {
 //    @Select("SELECT * FROM USER_TABLE WHERE ID = #{id}")
     User getUserById(Long id);
 
-    @Transactional
-    @Update("UPDATE USER_TABLE SET PASSWORD = #{newPassword} WHERE ID = #{id}")
-    int updateUserPassword(@Param("id") Long id, @Param("newPassword") String newPassword);
+//    @Transactional
+//    @Update("UPDATE USER_TABLE SET PASSWORD = #{newPassword} WHERE ID = #{id}")
+void updateUserPassword(@Param("id") Long id, @Param("newPassword") String newPassword);
 }

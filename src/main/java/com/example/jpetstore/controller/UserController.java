@@ -11,24 +11,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
 
-    private final UserServiceImpl userServiceImpl;
-
-    @Autowired
-    public UserController(UserServiceImpl userServiceImpl) {
-        this.userServiceImpl = userServiceImpl;
-    }
-
-    @PostMapping("/updatePw")
-    @ResponseBody
-    public String updatePassword(
-            @RequestParam("id") Long id,
-            @RequestParam("newPassword") String newPassword
-    ) {
-        int rowsUpdated = userServiceImpl.updatePassword(id, newPassword);
-        if (rowsUpdated > 0) {
-            return "Password updated successfully";
-        } else {
-            return "Failed to update password";
-        }
-    }
+//    private final UserServiceImpl userServiceImpl;
+//
+//    @Autowired
+//    public UserController(UserServiceImpl userServiceImpl) {
+//        this.userServiceImpl = userServiceImpl;
+//    }
+//
+//    @PostMapping("/updatePw")
+//    @ResponseBody
+//    public String updatePassword(
+//            @RequestParam("id") Long id,
+//            @RequestParam("newPassword") String newPassword
+//    ) {
+//        int rowsUpdated = userServiceImpl.updatePassword(id, newPassword);
+//        if (rowsUpdated > 0) {
+//            return "Password updated successfully";
+//        } else {
+//            return "Failed to update password";
+//        }
+//    }
 }

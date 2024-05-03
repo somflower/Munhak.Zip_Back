@@ -11,7 +11,7 @@ public abstract class UserServiceImpl implements UserService{
         this.mybatisUserDao = mybatisUserDao;
     }
 
-    public int updatePassword(Long id, String newPassword) {
-        return mybatisUserDao.updatePassword(id, newPassword);
+    public void updatePassword(Long id, String newPassword) {
+        mybatisUserDao.updatePassword(id, newPassword);
     }
 }

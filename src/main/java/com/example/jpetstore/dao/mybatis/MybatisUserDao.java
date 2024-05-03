@@ -18,8 +18,8 @@ public class MybatisUserDao implements UserDao {
     }
 
     @Override
-    public int updatePassword(Long id, String newPassword) throws DataAccessException {
+    public void updatePassword(Long id, String newPassword) throws DataAccessException {
         System.out.println("MybatisUserDao - updatePassword - id: " + id + ", newPassword: " + newPassword);
-        return userMapper.updateUserPassword(id, newPassword);
+        userMapper.updateUserPassword(id, newPassword);
     }
 }

@@ -6,4 +6,7 @@
     <select id="getUserById" resultType="com.example.jpetstore.domain.User">
         SELECT * FROM USER_TABLE WHERE ID = #{id}
     </select>
+    <select id="updateUserPassword" resultType="com.example.jpetstore.domain.User">
+        UPDATE USER_TABLE SET PASSWORD = #{newPassword} WHERE ID = #{id}
+    </select>
 </mapper>
