@@ -18,4 +18,6 @@ public interface UserMapper {
 //    @Update("UPDATE USER_TABLE SET PASSWORD = #{newPassword} WHERE ID = #{id}")
     void updateUserPassword(@Param("id") Long id, @Param("newPassword") String newPassword);
 
+    User findUser(@Param("hint") String hint, @Param("nickname") String nickname);
+
 }
