@@ -44,8 +44,15 @@ public class UserTest {
         else
             System.out.println("틀렸다!");
 
-        User user2 =  mybatisUserDao.findUser("dy", "dy");
+        //사용자 찾기
+        User user2 =  mybatisUserDao.findUser("kim", "mimi");
         System.out.println("찾은 유저 아이디:"+ user2.getUser_id());
+
+        //
+        User user3 = userDao.getUserById(3L);
+        mybatisUserDao.updateNickname(user.getId(), "dydy");
+        User user4 = userDao.getUserById(3L);
+        System.out.println("변경된 유저닉네임:"+ user4.getNickname());
     }
 
 }
