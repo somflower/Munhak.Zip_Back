@@ -21,4 +21,7 @@
     <delete id="deleteUser">
         DELETE FROM USER_TABLE WHERE ID = #{id}
     </delete>
+    <select id="findAllUser" resultType="com.example.jpetstore.domain.User">
+        SELECT * FROM USER_TABLE
+    </select>
 </mapper>
