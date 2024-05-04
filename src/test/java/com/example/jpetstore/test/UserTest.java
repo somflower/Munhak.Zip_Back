@@ -65,6 +65,9 @@ public class UserTest {
         }else {
             System.out.println("사용 가능한 닉네임입니다");
         }
+
+        User user6 = userDao.getUserById(61L);
+        mybatisUserDao.deleteUser(user6.getId());
     }
 
 }
