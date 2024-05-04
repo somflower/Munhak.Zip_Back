@@ -16,4 +16,6 @@ public abstract class UserServiceImpl implements UserService{
     }
 
     public void updateNickname(Long id, String newNickname) { mybatisUserDao.updateNickname(id, newNickname); }
+
+    public void deleteUser(Long id) { mybatisUserDao.deleteUser(id); }
 }
