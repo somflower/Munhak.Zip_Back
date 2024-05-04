@@ -1,5 +1,6 @@
 package com.example.jpetstore.dao.mybatis.mapper;
 
+import com.example.jpetstore.domain.Movie;
 import com.example.jpetstore.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -7,6 +8,8 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Mapper
 public interface UserMapper {
@@ -28,4 +31,6 @@ public interface UserMapper {
     User existingUserNickname(@Param("nickname") String nickname);
 
     void deleteUser(@Param("id") Long id);
+
+    List<User> findAllUser();
 }
