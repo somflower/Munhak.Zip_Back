@@ -26,4 +26,6 @@ public interface UserMapper {
 
     //사용자 중복 닉네임 체크
     User existingUserNickname(@Param("nickname") String nickname);
+
+    void deleteUser(@Param("id") Long id);
 }
