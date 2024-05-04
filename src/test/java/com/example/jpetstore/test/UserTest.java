@@ -61,7 +61,7 @@ public class UserTest {
         User user4 = userDao.getUserById(3L);
         System.out.println("변경된 유저닉네임:"+ user4.getNickname());
 
-        //
+        //중복 닉네임 체크
         User user5 = mybatisUserDao.existingNickname("dydy");
         if(user5 != null) {
             System.out.println("사용 중인 닉네임입니다");
@@ -69,9 +69,11 @@ public class UserTest {
             System.out.println("사용 가능한 닉네임입니다");
         }
 
+        //사용자 삭제
 //        User user6 = userDao.getUserById(61L);
 //        mybatisUserDao.deleteUser(user6.getId());
 
+        //사용자 전체 출력
         List<User> allUser = mybatisUserDao.findAllUser();
         for (User user7 : allUser) {
             System.out.println("ID: " + user7.getId());
