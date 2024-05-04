@@ -40,4 +40,10 @@ public class MybatisUserDao implements UserDao {
         System.out.println("MybatisUserDao - existingNickname - nickname: " + nickname);
         return userMapper.existingUserNickname(nickname);
     }
+
+    @Override
+    public void deleteUser(Long id) throws DataAccessException{
+        System.out.println("MybatisUserDao - deleteUser - id: " + id);
+        userMapper.deleteUser(id);
+    }
 }
