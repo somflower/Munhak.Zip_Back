@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class MybatisUserDao implements UserDao {
 
@@ -45,5 +47,11 @@ public class MybatisUserDao implements UserDao {
     public void deleteUser(Long id) throws DataAccessException{
         System.out.println("MybatisUserDao - deleteUser - id: " + id);
         userMapper.deleteUser(id);
+    }
+
+    @Override
+    public List<User> findAllUser() throws DataAccessException{
+        System.out.println("MybatisUserDao - findAllUser");
+        return userMapper.findAllUser();
     }
 }
