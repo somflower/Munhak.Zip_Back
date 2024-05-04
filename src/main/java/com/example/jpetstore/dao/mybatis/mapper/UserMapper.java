@@ -30,7 +30,9 @@ public interface UserMapper {
     //사용자 중복 닉네임 체크
     User existingUserNickname(@Param("nickname") String nickname);
 
+    //사용자 삭제
     void deleteUser(@Param("id") Long id);
 
+    //사용자 전체 리스트 출력
     List<User> findAllUser();
 }
