@@ -18,4 +18,7 @@
     <select id="existingUserNickname" resultType="com.example.jpetstore.domain.User">
         SELECT * FROM USER_TABLE WHERE NICKNAME = #{nickname}
     </select>
+    <delete id="deleteUser">
+        DELETE FROM USER_TABLE WHERE ID = #{id}
+    </delete>
 </mapper>
