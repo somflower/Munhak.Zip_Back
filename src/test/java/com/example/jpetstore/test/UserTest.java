@@ -3,12 +3,15 @@ package com.example.jpetstore.test;
 
 import com.example.jpetstore.dao.UserDao;
 import com.example.jpetstore.dao.mybatis.MybatisUserDao;
+import com.example.jpetstore.domain.Movie;
 import com.example.jpetstore.domain.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.List;
 
 import static junit.framework.TestCase.assertNotNull;
 import static org.junit.jupiter.api.Assertions.*;
@@ -66,8 +69,18 @@ public class UserTest {
             System.out.println("사용 가능한 닉네임입니다");
         }
 
-        User user6 = userDao.getUserById(61L);
-        mybatisUserDao.deleteUser(user6.getId());
+//        User user6 = userDao.getUserById(61L);
+//        mybatisUserDao.deleteUser(user6.getId());
+
+        List<User> allUser = mybatisUserDao.findAllUser();
+        for (User user7 : allUser) {
+            System.out.println("ID: " + user7.getId());
+            System.out.println("USERID: " + user7.getUser_id());
+            System.out.println("NICKNAME: " + user7.getNickname());
+            System.out.println("PASSWORD: " + user7.getPassword());
+            System.out.println("HINT: " + user7.getHint());
+            System.out.println("--------------------------");
+        }
     }
 
 }
