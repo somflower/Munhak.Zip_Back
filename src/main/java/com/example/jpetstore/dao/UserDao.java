@@ -3,6 +3,8 @@ package com.example.jpetstore.dao;
 import com.example.jpetstore.domain.User;
 import org.springframework.dao.DataAccessException;
 
+import java.util.List;
+
 public interface UserDao {
 
     public User getUserById(Long id) throws DataAccessException;
@@ -16,4 +18,6 @@ public interface UserDao {
     public User existingNickname(String nickname) throws DataAccessException;
 
     public void deleteUser(Long id) throws DataAccessException;
+
+    public List<User> findAllUser() throws DataAccessException;
 }
