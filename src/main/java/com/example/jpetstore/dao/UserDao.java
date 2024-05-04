@@ -14,4 +14,6 @@ public interface UserDao {
     public void updateNickname(Long id, String newNickname) throws DataAccessException;
 
     public User existingNickname(String nickname) throws DataAccessException;
+
+    public void deleteUser(Long id) throws DataAccessException;
 }
