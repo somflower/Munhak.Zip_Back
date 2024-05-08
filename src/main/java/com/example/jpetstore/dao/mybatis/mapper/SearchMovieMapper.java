@@ -9,7 +9,7 @@ import java.util.List;
 @Mapper
 public interface SearchMovieMapper {
     //    검색 키워드로 영화 검색
-//    @Transactional
-    List<Movie> searchMovieByKeyword(String keyword);
+
+    List<Movie> searchMovieByKeyword(@Param("keyword") String keyword);
 
 }
