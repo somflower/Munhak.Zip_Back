@@ -8,6 +8,8 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+
 @Repository
 public class MybatisMypageDao implements MypageDao {
     //MypageDao 재정의 및 구현
@@ -38,6 +40,15 @@ public class MybatisMypageDao implements MypageDao {
         System.out.println("MybatisMypageDao - changePassword - userId: " + id + ", newNickname: " + newPassword);
         return myPageMapper.updateUserPassword(id, newPassword);
     }
+
+    //취향 수정
+//    @Transactional
+//    @Override
+//    public int changeInterest(Long id, ArrayList<Genre> genre) throws DataAccessException {
+//        return 0;
+//    }
+
+
 
 
 }
