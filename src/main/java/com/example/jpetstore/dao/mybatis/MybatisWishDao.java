@@ -21,6 +21,8 @@ public class MybatisWishDao implements WishDao {
         return wishMapper.getWishMovie(id);
     }
 
+
+
     /*@Override
     public int getWishReview(String userId) {
         return wishMapper.getWishReview(userId);
