@@ -19,10 +19,12 @@ package com.example.jpetstore.dao.mybatis.mapper;
 import java.util.List;
 
 import com.example.jpetstore.domain.Order;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @author Eduardo Macarron
  */
+@Mapper
 public interface OrderMapper {
 
   List<Order> getOrdersByUsername(String username);

@@ -19,11 +19,13 @@ package com.example.jpetstore.dao.mybatis.mapper;
 import java.util.List;
 
 import com.example.jpetstore.domain.LineItem;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * @author Eduardo Macarron
  *
  */
+@Mapper
 public interface LineItemMapper {
 
   List<LineItem> getLineItemsByOrderId(int orderId);
