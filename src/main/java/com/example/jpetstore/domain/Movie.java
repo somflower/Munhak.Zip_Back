@@ -11,6 +11,10 @@ public class Movie {
     private String mvDetail;
     private List<String> genre;
     private List<Review> review;
+    private String mvDirector;
+
+    public Movie() {
+    }
 
     public Long getMvId() {
         return mvId;

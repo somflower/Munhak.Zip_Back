@@ -3,6 +3,7 @@ package com.example.jpetstore.dao.mybatis;
 import com.example.jpetstore.dao.WishDao;
 import com.example.jpetstore.dao.mybatis.mapper.WishMapper;
 import com.example.jpetstore.domain.Movie;
+import com.example.jpetstore.domain.Review;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
@@ -17,18 +18,17 @@ public class MybatisWishDao implements WishDao {
     private WishMapper wishMapper;
 
     @Override
-    public List<Movie> getWishMovie(int id) throws DataAccessException {
+    public List<Movie> getWishMovie(int id) throws DataAccessException{
         return wishMapper.getWishMovie(id);
     }
 
-    /*@Override
-    public int getWishReview(String userId) {
-        return wishMapper.getWishReview(userId);
+    @Override
+    public List<Review> getWishReview(int id) throws DataAccessException{
+        return wishMapper.getWishReview(id);
     }
 
     @Override
-    public String getMyReview(String userId) {
+    public List<Review> getMyReview(String userId) throws DataAccessException{
         return wishMapper.getMyReview(userId);
     }
-    */
 }
