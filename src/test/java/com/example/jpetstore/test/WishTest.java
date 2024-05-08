@@ -2,6 +2,7 @@ package com.example.jpetstore.test;
 
 import com.example.jpetstore.dao.mybatis.MybatisWishDao;
 import com.example.jpetstore.domain.Movie;
+import com.example.jpetstore.domain.Review;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,15 +48,57 @@ public class WishTest {
         }
     }
 
-    /*@Test
+    @Test
     public void testGetWishReview() throws Exception{
         // 좋아하는 리뷰
+        List<Review> review1 = mybatisWishDao.getWishReview(21);
+        System.out.println("mih 찜한 평론가 리뷰 가져오기");
+        for (Review review : review1) {
+            System.out.println("Review Writer: " + review.getWriter());
+            System.out.println("Review Star: " + review.getRvStar());
+            System.out.println("Review Title: " + review.getRvTitle());
+            System.out.println("Review Context: " + review.getContent());
+            System.out.println("--------------------------");
+        }
+        System.out.println();
 
+        List<Review> review2 = mybatisWishDao.getWishReview(3);
+        System.out.println("dayun 찜한 평론가 리뷰 가져오기");
+        for (Review review : review2) {
+            System.out.println("Review Writer: " + review.getWriter());
+            System.out.println("Review Star: " + review.getRvStar());
+            System.out.println("Review Title: " + review.getRvTitle());
+            System.out.println("Review Context: " + review.getContent());
+            System.out.println("--------------------------");
+        }
+        System.out.println();
+
+        List<Review> review3 = mybatisWishDao.getWishReview(2);
+        System.out.println("HMY 찜한 평론가 리뷰 가져오기");
+        for (Review review : review3) {
+            System.out.println("Review Writer: " + review.getWriter());
+            System.out.println("Review Star: " + review.getRvStar());
+            System.out.println("Review Title: " + review.getRvTitle());
+            System.out.println("Review Context: " + review.getContent());
+            System.out.println("--------------------------");
+        }
+        System.out.println();
     }
+
+
     @Test
     public void testGetMyReview() throws Exception{
     // 내가 작성한 리뷰
-    }*/
+        List<Review> myReview1 = mybatisWishDao.getMyReview("mih");
+        System.out.println("HMY 찜한 평론가 리뷰 가져오기");
+        for (Review myReview : myReview1) {
+            System.out.println("Movie Title: " + myReview.getMvTitle());
+            System.out.println("MyReview Star: " + myReview.getRvStar());
+            System.out.println("MyReview Context: " + myReview.getContent());
+            System.out.println("--------------------------");
+        }
+        System.out.println();
+    }
 
 
 }

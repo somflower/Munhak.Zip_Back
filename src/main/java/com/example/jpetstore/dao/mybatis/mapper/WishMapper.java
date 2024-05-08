@@ -12,11 +12,6 @@ import java.util.Map;
 @Mapper
 public interface WishMapper {
      List<Movie> getWishMovie(int id);
-    /*@Transactional
-    @Select("SELECT REVIEW_ID FROM REVIEW_WISH WHERE USER_ID = #{userID}")
-    public Review getWishReview(String userId);
-
-    @Transactional
-    @Select("SELECT CONTENT FROM REVIEW WHERE ID = #{userID}")
-    public Review getMyReview(String userId);*/
+     List<Review> getWishReview(int id);
+     List<Review> getMyReview(String userId);
 }
