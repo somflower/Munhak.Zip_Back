@@ -48,7 +48,7 @@ public class WishTest {
         }
     }
 
-    @Test
+    @Test // 좋아하는 리뷰
     public void testGetWishReview() throws Exception{
         // 좋아하는 리뷰
         List<Review> review1 = mybatisWishDao.getWishReview(21);
@@ -86,6 +86,34 @@ public class WishTest {
     }
 
 
+    @Test // 좋아하는 리뷰 삭제
+    public void testDeleteWishReview() throws Exception{
+        // 삭제 전 출력
+        System.out.println("삭제 전 출력");
+        List<Review> review1 = mybatisWishDao.getWishReview(21);
+        for (Review review : review1) {
+            System.out.println("Review Writer: " + review.getWriter());
+            System.out.println("Review Star: " + review.getRvStar());
+            System.out.println("Review Title: " + review.getRvTitle());
+            System.out.println("Review Context: " + review.getContent());
+            System.out.println("--------------------------");
+        }
+        System.out.println();
+
+        // 삭제 후 출력
+        System.out.println("삭제 후 출력");
+        int deleteWishReview1 = mybatisWishDao.deleteWishReview(21, 41);
+        review1 = mybatisWishDao.getWishReview(21); // 삭제 후 다시 받아와야 함
+        for (Review review : review1) {
+            System.out.println("Review Writer: " + review.getWriter());
+            System.out.println("Review Star: " + review.getRvStar());
+            System.out.println("Review Title: " + review.getRvTitle());
+            System.out.println("Review Context: " + review.getContent());
+            System.out.println("--------------------------");
+        }
+        System.out.println();
+    }
+
     @Test
     public void testGetMyReview() throws Exception{
     // 내가 작성한 리뷰
@@ -99,6 +127,4 @@ public class WishTest {
         }
         System.out.println();
     }
-
-
 }
