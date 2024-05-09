@@ -31,4 +31,6 @@ public interface UserDao {
     public void updateInterest(Long id, String genre) throws DataAccessException;
 
     public void addUser(User user) throws DataAccessException;
+
+    public User findAllUserInterest(Long id) throws DataAccessException;
 }
