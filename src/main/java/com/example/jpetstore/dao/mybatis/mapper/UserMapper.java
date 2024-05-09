@@ -1,5 +1,6 @@
 package com.example.jpetstore.dao.mybatis.mapper;
 
+import com.example.jpetstore.domain.Interest;
 import com.example.jpetstore.domain.Movie;
 import com.example.jpetstore.domain.User;
 import org.apache.ibatis.annotations.Mapper;
@@ -9,6 +10,7 @@ import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @Mapper
@@ -35,4 +37,12 @@ public interface UserMapper {
 
     //사용자 전체 리스트 출력
     List<User> findAllUser();
+
+    void addInterest(Interest interest);
+
+    Interest findInterest(@Param("id") Long id);
+
+    void updateInterest(@Param("id")Long id, @Param("genre")String genre);
+
+    void addUser(User user);
 }
