@@ -1,5 +1,7 @@
 package com.example.jpetstore.domain;
 
+import java.util.List;
+
 public class User {
 
     private Long id;
@@ -48,4 +50,5 @@ public class User {
     public void setHint(String hint) {
         this.hint = hint;
     }
+
 }
