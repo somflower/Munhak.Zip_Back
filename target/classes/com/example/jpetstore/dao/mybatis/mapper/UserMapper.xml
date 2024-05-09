@@ -24,4 +24,24 @@
     <select id="findAllUser" resultType="com.example.jpetstore.domain.User">
         SELECT * FROM USER_TABLE
     </select>
+    <insert id="addInterest" parameterType="Interest">
+        INSERT INTO INTEREST (ID, GENRE)
+        VALUES
+            (#{id}, #{genre})
+    </insert>
+    <select id="findInterest" resultType="Interest">
+        SELECT * FROM INTEREST
+        WHERE ID = #{id}
+    </select>
+    <update id="updateInterest">
+        UPDATE INTEREST SET GENRE = #{genre} WHERE ID = #{id}
+    </update>
+    <insert id="addUser" parameterType="User">
+        <selectKey keyProperty="id" resultType="java.lang.Long" order="BEFORE">
+            SELECT SEQUENCE_USERID.NEXTVAL FROM DUAL
+        </selectKey>
+        INSERT INTO USER_TABLE (ID, USER_ID, PASSWORD, NICKNAME, HINT)
+        VALUES
+            (#{id}, #{user_id}, #{password}, #{nickname}, #{hint})
+    </insert>
 </mapper>
