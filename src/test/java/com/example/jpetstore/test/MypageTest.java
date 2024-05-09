@@ -39,7 +39,7 @@ public class MypageTest {
         assertNotNull(user);
         System.out.println("이전 유저 닉네임:" + user.getId() + user.getNickname());
         // 사용자의 닉네임 변경
-        mybatisMypageDao.updateNickname(user.getId(), "신뇽");
+        mybatisMypageDao.updateNickname(user.getId(), "신뇽임");
 
         User user1 = mybatisMypageDao.getUserById(2L); // 콘솔에 출력하려면 새로 객체를 다시 만들어줘야함!!
 
@@ -62,7 +62,7 @@ public class MypageTest {
         System.out.println("이전 유저 아이디:" + user3.getId() + "이전 비밀번호:" + user3.getPassword());
 
 //        System.out.println("현재 비밀번호를 입력하세요: ");
-//        String currentPassword = br.readLine();
+//        String currentPassword A= br.readLine();
 
 //        if (user3.getPassword() == currentPassword) {
 //            System.out.println("새로운 비밀번호를 입력하세요: ");
@@ -72,7 +72,7 @@ public class MypageTest {
 //        } else {
 //            System.out.println("비밀번호가 일치하지 않습니다.");
 //        }
-        mybatisMypageDao.changePassword(user3.getId(), "새비밀번호");
+        mybatisMypageDao.changePassword(user3.getId(), "MIN");
 
         User user4 = mybatisMypageDao.getUserById(2L);
         System.out.println("변경된 비밀번호:" + user4.getPassword());
