@@ -60,7 +60,7 @@ public class UserTest {
             System.out.println("사용자를 찾을 수 없습니다.");
         }
 
-        //사용자 닉제임 수정
+        //사용자 닉네임 수정
         User user3 = userDao.getUserById(3L);
         mybatisUserDao.updateNickname(user.getId(), "dydy");
         User user4 = userDao.getUserById(3L);
@@ -90,18 +90,6 @@ public class UserTest {
             System.out.println("--------------------------");
         }
 
-        Long userId = 3L;
-//        List<String> genre = new ArrayList<>(); // 예시 관심사
-//        genre.add("0");
-//        genre.add("1");
-//        System.out.println(genre);
-
-        // 사용자의 관심사 추가
-//        Interest interest = new Interest();
-//        interest.setId(userId);
-//        interest.setGenre(genre.toString());
-//        userDao.addInterest(interest);
-
         //사용자의 관심사 찾기
         Interest interests = userDao.findInterest(3L);
         System.out.println("관심사:"+ interests.getGenre());
@@ -114,23 +102,33 @@ public class UserTest {
 //        userDao.updateInterest(3L, genre.toString());
 
         //사용자 추가
-        User user9 = new User();
-        user9.setUser_id("안녕");
-        user9.setPassword("hello");
-        user9.setHint("하이");
-        user9.setNickname("hi");
-        userDao.addUser(user9);
+//        User user9 = new User();
+//        user9.setUser_id("안녕22");
+//        user9.setPassword("hello22");
+//        user9.setHint("하이22");
+//        user9.setNickname("hi22");
+//        userDao.addUser(user9);
+//
+//        List<String> genre = new ArrayList<>(); // 예시 관심사
+//        genre.add("1");
+//        genre.add("3");
+//        System.out.println(genre);
+//
+//        Interest interest = new Interest();
+//        interest.setId(user9.getId());
+//        interest.setGenre(genre.toString());
+//        userDao.addInterest(interest); //관심사도 추가
 
-        List<String> genre = new ArrayList<>(); // 예시 관심사
-        genre.add("2");
-        genre.add("4");
-        System.out.println(genre);
-
-        Interest interest = new Interest();
-        interest.setId(user9.getId());
-        interest.setGenre(genre.toString());
-        userDao.addInterest(interest);
-
+        //사용자 취향까지 출력
+        User user10 = mybatisUserDao.findAllUserInterest(3L);
+        System.out.println("--------------------------");
+        System.out.println("ID: " + user10.getId());
+        System.out.println("USERID: " + user10.getUser_id());
+        System.out.println("NICKNAME: " + user10.getNickname());
+        System.out.println("PASSWORD: " + user10.getPassword());
+        System.out.println("HINT: " + user10.getHint());
+        System.out.println("INTEREST: " + user10.getGenre());
+        System.out.println("--------------------------");
     }
 
 }
