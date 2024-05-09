@@ -1,5 +1,6 @@
 package com.example.jpetstore.domain;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 public class User {
@@ -10,6 +11,8 @@ public class User {
     private String password;
     private String nickname;
     private String hint;
+
+    private String genre;
 
     public Long getId() {
         return id;
@@ -51,4 +54,11 @@ public class User {
         this.hint = hint;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 }
