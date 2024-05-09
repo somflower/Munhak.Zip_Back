@@ -2,12 +2,14 @@ package com.example.jpetstore.dao.mybatis;
 
 import com.example.jpetstore.dao.UserDao;
 import com.example.jpetstore.dao.mybatis.mapper.UserMapper;
+import com.example.jpetstore.domain.Interest;
 import com.example.jpetstore.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class MybatisUserDao implements UserDao {
@@ -53,5 +55,29 @@ public class MybatisUserDao implements UserDao {
     public List<User> findAllUser() throws DataAccessException{
         System.out.println("MybatisUserDao - findAllUser");
         return userMapper.findAllUser();
+    }
+
+    @Override
+    public void addInterest(Interest interest) throws DataAccessException{
+        System.out.println("MybatisUserDao - addInterest");
+        userMapper.addInterest(interest);
+    }
+
+    @Override
+    public Interest findInterest(Long id) throws DataAccessException{
+        System.out.println("MybatisUserDao - findInterest");
+        return userMapper.findInterest(id);
+    }
+
+    @Override
+    public void updateInterest(Long id, String genre) throws DataAccessException{
+        System.out.println("MybatisUserDao - updateInterest");
+        userMapper.updateInterest(id, genre);
+    }
+
+    @Override
+    public void addUser(User user) throws DataAccessException{
+        System.out.println("MybatisUserDao - addUser");
+        userMapper.addUser(user);
     }
 }
