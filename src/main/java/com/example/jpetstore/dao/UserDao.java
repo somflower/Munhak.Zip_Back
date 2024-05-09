@@ -1,9 +1,12 @@
 package com.example.jpetstore.dao;
 
+import com.example.jpetstore.domain.Interest;
 import com.example.jpetstore.domain.User;
 import org.springframework.dao.DataAccessException;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
+import java.util.Map;
 
 public interface UserDao {
 
@@ -20,4 +23,12 @@ public interface UserDao {
     public void deleteUser(Long id) throws DataAccessException;
 
     public List<User> findAllUser() throws DataAccessException;
+
+    public void addInterest(Interest interest) throws DataAccessException;
+
+    public Interest findInterest(Long id) throws DataAccessException;
+
+    public void updateInterest(Long id, String genre) throws DataAccessException;
+
+    public void addUser(User user) throws DataAccessException;
 }
