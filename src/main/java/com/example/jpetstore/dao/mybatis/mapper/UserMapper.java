@@ -45,4 +45,6 @@ public interface UserMapper {
     void updateInterest(@Param("id")Long id, @Param("genre")String genre);
 
     void addUser(User user);
+
+    User findAllUserInterest(@Param("id") Long id);
 }
