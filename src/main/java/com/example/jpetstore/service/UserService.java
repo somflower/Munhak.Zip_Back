@@ -1,8 +1,8 @@
 package com.example.jpetstore.service;
 
-import com.example.jpetstore.dao.mybatis.MybatisMypageDao;
-
 public interface UserService {
-    public int updatePassword(Long id, String newPassword);
+    public void updatePassword(Long id, String newPassword);
+    public void updateNickname(Long id, String newNickname);
 
+    public void deleteUser(Long id);
 }
