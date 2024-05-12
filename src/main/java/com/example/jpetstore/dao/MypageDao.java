@@ -1,9 +1,9 @@
 package com.example.jpetstore.dao;
 
-import com.example.jpetstore.dao.mybatis.mapper.MyPageMapper;
 import com.example.jpetstore.domain.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+
+import java.util.ArrayList;
 
 public interface MypageDao {
 
@@ -17,4 +17,7 @@ public interface MypageDao {
     public int changePassword(Long id, String newPassword) throws DataAccessException;
     //새 비밀번호 확인까지 DB에 넣을 필요는 없을 듯 프론트 단에서 하면 될듯
 
+
+    //취향 수정
+//    public int changeInterest(Long id, ArrayList<Genre> genre) throws DataAccessException;
 }

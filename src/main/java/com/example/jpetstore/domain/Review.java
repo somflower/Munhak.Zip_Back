@@ -1,10 +1,11 @@
 package com.example.jpetstore.domain;
 
 public class Review {
+    // private int id; //삭제
     private int mvId;
     private int rvId;
     private int rvStar;
-    private String mvTitle;
+    private String mvTitle; // 추가
     private String writer;
     private String content;
     private String rvTitle;

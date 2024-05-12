@@ -3,6 +3,7 @@ package com.example.jpetstore.dao.mybatis.mapper;
 import com.example.jpetstore.domain.Movie;
 import com.example.jpetstore.domain.Review;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,5 +14,6 @@ import java.util.Map;
 public interface WishMapper {
      List<Movie> getWishMovie(int id);
      List<Review> getWishReview(int id);
+     int deleteWishReview(@Param("id") int id, @Param("rvId") int rvId);
      List<Review> getMyReview(String userId);
 }
